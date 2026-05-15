@@ -1,27 +1,27 @@
 {
   "name": "psigabriel",
-  "type": "module",
   "private": true,
   "description": "Site do Psicólogo clínico Gabriel Curi",
+  "keywords": [
+    "Gabriel Curi",
+    "psicologia",
+    "psicologo",
+    "psicologo clinico"
+  ],
+  "homepage": "https://git.cbpf.br/rafaelcuri/psigabriel",
+  "bugs": "https://git.cbpf.br/rafaelcuri/psigabriel/-/issues",
+  "license": "MIT",
   "author": {
     "name": "Rafael Curi",
     "email": "rafael@curi.dev.br",
     "url": "https://curi.dev.br"
   },
-  "license": "MIT",
-  "funding": "https://github.com/rafinhacuri/",
-  "homepage": "https://git.cbpf.br/rafaelcuri/psigabriel",
   "repository": {
     "type": "git",
     "url": "git+https://git.cbpf.br/rafaelcuri/psigabriel.git"
   },
-  "bugs": "https://git.cbpf.br/rafaelcuri/psigabriel/-/issues",
-  "keywords": [
-    "psicologia",
-    "psicologo",
-    "psicologo clinico",
-    "Gabriel Curi"
-  ],
+  "funding": "https://github.com/rafinhacuri/",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
