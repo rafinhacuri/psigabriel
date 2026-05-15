@@ -11,6 +11,8 @@
   const profileImage = '/perfil.jpeg'
 
   const { y } = useWindowScroll({ behavior: 'smooth' })
+
+  useHead({ title: 'Homepage' })
 </script>
 
 <template>
@@ -323,15 +325,21 @@
 
         <div
           class="mx-auto mt-8 flex max-w-5xl flex-col items-center justify-center gap-5 text-white/95 sm:flex-row sm:gap-8">
-          <a :href="`mailto:${email}`" class="flex items-center gap-3 hover:text-white">
+          <NuxtLink
+            :to="`mailto:${email}`"
+            external
+            class="flex items-center gap-3 hover:text-white">
             <UIcon name="ph:envelope-simple" class="size-7" />
             <span>{{ email }}</span>
-          </a>
+          </NuxtLink>
           <span class="hidden h-9 w-px bg-white/50 sm:block" />
-          <a :href="`tel:+${whatsappNumber}`" class="flex items-center gap-3 hover:text-white">
+          <NuxtLink
+            :to="`tel:+${whatsappNumber}`"
+            external
+            class="flex items-center gap-3 hover:text-white">
             <UIcon name="ph:phone" class="size-7" />
             <span>{{ phone }}</span>
-          </a>
+          </NuxtLink>
         </div>
       </section>
 
@@ -370,17 +378,21 @@
           <div>
             <h2 class="text-sm font-semibold tracking-[0.14em] uppercase">Contato</h2>
             <div class="mt-5 space-y-3">
-              <a
-                :href="whatsappUrl"
+              <NuxtLink
+                :to="whatsappUrl"
+                external
                 target="_blank"
                 class="flex items-center gap-3 hover:text-white/80">
                 <UIcon name="ph:whatsapp-logo" class="size-6" />
                 <span>{{ phone }}</span>
-              </a>
-              <a :href="`mailto:${email}`" class="flex items-center gap-3 hover:text-white/80">
+              </NuxtLink>
+              <NuxtLink
+                :to="`mailto:${email}`"
+                external
+                class="flex items-center gap-3 hover:text-white/80">
                 <UIcon name="ph:envelope-simple" class="size-6" />
                 <span>{{ email }}</span>
-              </a>
+              </NuxtLink>
               <p class="flex items-center gap-3">
                 <UIcon name="ph:map-pin" class="size-6" />
                 <span>Atendimento online - onde você estiver</span>
@@ -390,13 +402,14 @@
 
           <div>
             <h2 class="text-sm font-semibold tracking-[0.14em] uppercase">Redes sociais</h2>
-            <a
-              :href="instagramUrl"
+            <NuxtLink
+              :to="instagramUrl"
               target="_blank"
+              external
               class="mt-5 flex items-center gap-3 hover:text-white/80">
               <UIcon name="ph:instagram-logo" class="size-7" />
               <span>psi.gabrielcuri</span>
-            </a>
+            </NuxtLink>
           </div>
         </div>
         <p class="mt-10 text-center text-sm text-white/80">
