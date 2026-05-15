@@ -21,7 +21,6 @@ export default defineNuxtConfig({
   app: {
     head: { templateParams: { separator: '•' } },
   },
-
   css: ['~/assets/main.css'],
   site: {
     name: 'Psigabriel',
@@ -33,6 +32,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2026-04-15',
   linkChecker: { enabled: false },
+  ogImage: { enabled: false },
   security: {
     headers: {
       permissionsPolicy: {
