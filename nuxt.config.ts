@@ -5,7 +5,15 @@ import { defineNuxtConfig } from 'nuxt/config'
 const { DEV_URL, DEV_KEY, DEV_CERT } = env
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/seo', 'nuxt-security', '@nuxt/ui', '@nuxt/a11y', '@nuxt/hints', 'nuxt-aos'],
+  modules: [
+    '@nuxtjs/seo',
+    'nuxt-security',
+    '@nuxt/ui',
+    '@nuxt/a11y',
+    '@nuxt/hints',
+    'nuxt-aos',
+    '@vueuse/nuxt',
+  ],
   $development: {
     security: { headers: { crossOriginEmbedderPolicy: 'unsafe-none' } },
   },

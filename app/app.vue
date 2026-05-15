@@ -9,6 +9,8 @@
   const landscapeImage = '/pra-quem.png'
   const heroImage = '/hero.png'
   const profileImage = '/perfil.jpeg'
+
+  const { y } = useWindowScroll({ behavior: 'smooth' })
 </script>
 
 <template>
@@ -21,7 +23,7 @@
         data-aos="fade-down">
         <div
           class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-12">
-          <a href="#inicio" class="flex items-center gap-4" aria-label="Ir para o início">
+          <button class="flex items-center gap-4" aria-label="Ir para o início" @click="y = 0">
             <div
               class="flex size-14 items-center justify-center rounded-full border border-[#d2c7b8] text-[#2f5e51]">
               <UIcon name="ph:plant" class="size-8" />
@@ -34,7 +36,7 @@
                 Psicólogo clínico | CRP 05/84745
               </p>
             </div>
-          </a>
+          </button>
 
           <UButton
             :to="whatsappUrl"
@@ -53,7 +55,7 @@
           <img
             :src="heroImage"
             alt="Consultório com poltrona, plantas e luz natural"
-            class="size-full object-cover object-right" />
+            class="size-full object-contain object-right" />
           <div
             class="absolute inset-0 bg-linear-to-r from-[#f7f3ed] via-[#f7f3ed]/80 to-transparent" />
         </div>
